@@ -2,7 +2,6 @@ var limit = 10
 var number = 0
 function randomGenerate(){
     let num = Math.random() * limit + 1
-    console.log(Math.floor(num))
     return Math.floor(num)
 }
 number = randomGenerate()
