@@ -23,11 +23,13 @@ elements.forEach((element, index) => {
         const h1 = element.querySelector('h1')
         if(!board[index] && !checkWinner()){
             currentPlayer = currentPlayer === "X"? "0": "X";
+            console.log(currentPlayer)
             h1.innerText = currentPlayer
             board[index] = currentPlayer;
             playertyp = currentPlayer === "X"? "(Player 1) Turn": "(Player 2) Turn";
-            texttyp = currentPlayer === "X"? "(Player 1)": "(Player 2)";
+            texttyp = currentPlayer === "0"? "(Player 1)": "(Player 2)";
             document.querySelector(".Winner").innerText = playertyp
+            
             const winner = checkWinner();
             if(winner){
                 const winhead = document.querySelector('.Winner')
