@@ -26,5 +26,5 @@ add.addEventListener('click', () => {
 remove.addEventListener('click', () => {
     let number = Number(num.innerHTML);
     changeColor()
-    num > 0 ? num.innerHTML = parseInt(num.innerHTML) - 1 : num.innerHTML = 0;
+    number > 0 ? num.innerHTML = parseInt(num.innerHTML) - 1 : num.innerHTML = 0;
 });
