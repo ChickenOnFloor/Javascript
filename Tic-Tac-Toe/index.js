@@ -1,5 +1,5 @@
 const elements = document.querySelectorAll('.card');
-let currentPlayer = 'X'
+let currentPlayer = '0'
 const board = Array(9).fill(null);
 
 function checkWinner(){
@@ -26,8 +26,8 @@ elements.forEach((element, index) => {
             console.log(currentPlayer)
             h1.innerText = currentPlayer
             board[index] = currentPlayer;
-            playertyp = currentPlayer === "X"? "(Player 1) Turn": "(Player 2) Turn";
-            texttyp = currentPlayer === "0"? "(Player 1)": "(Player 2)";
+            playertyp = currentPlayer === "0"? "(Player 1) Turn": "(Player 2) Turn";
+            texttyp = currentPlayer === "X"? "(Player 1)": "(Player 2)";
             document.querySelector(".Winner").innerText = playertyp
             
             const winner = checkWinner();
