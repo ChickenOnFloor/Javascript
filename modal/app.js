@@ -4,7 +4,7 @@ const close = document.querySelector('.close');
 const modal = document.querySelector('.modal');
 const backdrop = document.querySelector('.backdrop');
 
-function closeModal(){
+function close_Modal(){
     modal.style.opacity = "0";
     modal.style.transform = "translateY(-100vh)";
     backdrop.style.display = "none";
@@ -17,15 +17,15 @@ shmodal.addEventListener('click', () => {
 });
 
 close.addEventListener('click', () => {
-    closeModal()
+    close_Modal()
 
 });
 
 backdrop.addEventListener('click', () => {
-    closeModal()
+    close_Modal()
 });
 
 confirm.addEventListener('click', () => {
-    closeModal()
+    close_Modal()
     alert('You clicked confirm');
 });
