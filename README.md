@@ -2,7 +2,7 @@
 
 **I created these small javascript projects just to practice <3**
 ##Live
-* [All-in-one](jawwad-js-practice-projects.netlify.app).
+* [All-in-one](https://jawwad-js-practice-projects.netlify.app).
 ## Previews
 * [Tic Tac Toe](https://chickenonfloor.github.io/Javascript/Tic-Tac-Toe/).
 * [Guess The Number](https://chickenonfloor.github.io/Javascript/Guess-The-Number/).
