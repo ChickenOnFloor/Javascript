@@ -8,3 +8,5 @@
 * [Guess The Number](https://chickenonfloor.github.io/Javascript/Guess-The-Number/).
 * [Rock Paper Scissor](https://chickenonfloor.github.io/Javascript/Rock-Paper-Scissor/).
 * [Counter (Not a game)](https://chickenonfloor.github.io/Javascript/counter/).
+* [Expense Tracker (Not a game)](https://chickenonfloor.github.io/Javascript/ExpenseTracker/).
+* [Dynamic Cards (Not a game)](https://chickenonfloor.github.io/Javascript/dynamicCards/).
