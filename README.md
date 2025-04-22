@@ -10,3 +10,4 @@
 * [Counter (Not a game)](https://chickenonfloor.github.io/Javascript/counter/).
 * [Expense Tracker (Not a game)](https://chickenonfloor.github.io/Javascript/ExpenseTracker/).
 * [Dynamic Cards (Not a game)](https://chickenonfloor.github.io/Javascript/dynamicCards/).
+* [Quiz App (Not a game)](https://chickenonfloor.github.io/Javascript/QuizApp/).
