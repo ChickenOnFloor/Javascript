@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h3>Student Manager</h3>
+    <form id="studentForm">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="number" id="age" placeholder="Age (3–18)" min="3" max="18" required>
+      <input type="number" id="grade" placeholder="Grade (1–10)" min="1" max="10" required>
+      <button type="submit">Add Student</button>
+    </form>
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>Name</th><th>Age</th><th>Grade</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <h4>Edit Student</h4>
+      <form id="editForm">
+        <input type="text" id="editName" required>
+        <input type="number" id="editAge" min="3" max="18" required>
+        <input type="number" id="editGrade" min="1" max="10" required>
+        <button type="submit">Update</button>
+        <button type="button" onclick="cancelEdit()">Cancel</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
