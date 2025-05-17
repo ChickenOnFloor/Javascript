@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-blog">
+        <button class="go-Dash">Go to Dashboard</button>
+        <button class="logout-b">logout</button>
+        <div class="blog-container">
+            
+        </div>
+    </div>
+    <script>
+        var db = localStorage.getItem("dataBase")
+        if(db && JSON.parse(db).LoggedInUser === ""){
+            window.location.href = "index.html"
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

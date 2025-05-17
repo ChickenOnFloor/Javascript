@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="signin sign">
+                <label>Sign In</label>
+                <input type="email" placeholder="Email" class="signe">
+                <input type="password" placeholder="Password" class="signp">
+                <div class="buttons">
+                    <button class="login">Sign In</button>
+                    <a href="#" class="sign-up">sign up</a>
+                </div>
+            </div>
+            <div class="signup sign signHide">
+                <label>Sign Up</label>
+                <input type="text" placeholder="Username" class="upu">
+                <input type="email" placeholder="Email" class="upe">
+                <input type="password" placeholder="Password" class="upp">
+                <div class="buttons">
+                    <button class="loginup">Sign Up</button>
+                    <a href="#" class="sign-in">sign in</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var db = localStorage.getItem("dataBase")
+        if(db && JSON.parse(db).LoggedInUser !== ""){
+            window.location.href = "blog.html"
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

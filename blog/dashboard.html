@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="dash-button">
+        <button class="logout-b">logout</button>
+        <button class="blogb">Go To Blog</button>
+        </div>
+        <div class="dashcontainer">
+            <div class="addpost">
+                <input class="postimg" type="text" placeholder="Image URL">
+                <input class="postcap" type="text" name="" id="" placeholder="Caption">
+                <input class="postprice" type="text" name="" id="" placeholder="Price">
+                <button class="adpost">Add Post</button>
+            </div>
+            <div class="posts">
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        var db = localStorage.getItem("dataBase")
+        if(db && JSON.parse(db).LoggedInUser === ""){
+            window.location.href = "index.html"
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
