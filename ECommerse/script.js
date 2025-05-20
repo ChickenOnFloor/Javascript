@@ -48,7 +48,7 @@ const updataDatabase = () => {
 }
 
 if(!dataBase.Users[0]){
-    dataBase.Users.push({username: "walker", email: "abc123@gmail.com", password: "12345678", products: [{name: "Belt", price:"10", image: "/images/Belt.jpg", category:"Men Style"}, {name: "IPhone 10", price: "200", image: "/images/IPhone10.webp", category:"Phone"}, {name: "IPhone 11", price: "300", image: "/images/IPhone11.webp", category: "Phone"}, {name: "Kajal", price: "10", image: "/images/kajal.webp", category: "Makeup"}, {name: "Lipstick", price: "20", image: "/images/LipStick.jpg", category: "Makeup"}, {name: "Logitec Keyboard", price: "100", image: "/images/LogitecKeyboard.webp", category: "Gaming"}, {name: "Pencil Lipstick", price: "30", image: "/images/pencillipstick.webp", category: "Makeup"}, {name: "Razer Headset", price: "400", image: "/images/RazerHeadset.webp", category: "Gaming"}, {name: "Razer Keyboard", price: "300", image: "/images/RazerKeyboard.jpg", category: "Gaming"}, {name: "Razer Mouse", price: "200", image: "/images/RazerMouse.jpg", category: "Gaming"}, {name: "Shirt", price: "30", image: "/images/shirt.jpg", category: "Men Style"}, {name: "Watch", price: "1000", image: "/images/watch.jpg", category: "Men Style"}], cart: []})
+    dataBase.Users.push({username: "walker", email: "abc123@gmail.com", password: "12345678", products: [{name: "Belt", price:"10", image: "./images/Belt.jpg", category:"Men Style"}, {name: "IPhone 10", price: "200", image: "./images/IPhone10.webp", category:"Phone"}, {name: "IPhone 11", price: "300", image: "./images/IPhone11.webp", category: "Phone"}, {name: "Kajal", price: "10", image: "./images/kajal.webp", category: "Makeup"}, {name: "Lipstick", price: "20", image: "./images/LipStick.jpg", category: "Makeup"}, {name: "Logitec Keyboard", price: "100", image: "./images/LogitecKeyboard.webp", category: "Gaming"}, {name: "Pencil Lipstick", price: "30", image: "./images/pencillipstick.webp", category: "Makeup"}, {name: "Razer Headset", price: "400", image: "./images/RazerHeadset.webp", category: "Gaming"}, {name: "Razer Keyboard", price: "300", image: "./images/RazerKeyboard.jpg", category: "Gaming"}, {name: "Razer Mouse", price: "200", image: "./images/RazerMouse.jpg", category: "Gaming"}, {name: "Shirt", price: "30", image: "./images/shirt.jpg", category: "Men Style"}, {name: "Watch", price: "1000", image: "./images/watch.jpg", category: "Men Style"}], cart: []})
     updataDatabase()
 }
 const signup = document.querySelector(".sign-up")
@@ -253,7 +253,7 @@ function renderProductCard(product) {
             }
         })
         total.innerHTML = totalCost
-    iteml.innerHTML = itemlinner
+        iteml.innerHTML = itemlinner
   }
 const updateCards = () => {
     if(container){
