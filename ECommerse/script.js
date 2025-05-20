@@ -10,7 +10,7 @@ const categories = [
     "Makeup",
     "Men Style"
 ]
-var filter = ["Gaming"]
+var filter = []
 const categorySection = document.querySelector(".classList")
 if(categorySection){
     
@@ -255,6 +255,7 @@ function renderProductCard(product) {
         total.innerHTML = totalCost
         iteml.innerHTML = itemlinner
   }
+  updateCart()
 const updateCards = () => {
     if(container){
         container.innerHTML = "";
