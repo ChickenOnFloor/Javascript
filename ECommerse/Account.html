@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="a-main">
+        <div class="a-container">
+            <div class="setting">
+                <div class="input-zone">
+                    <label>Username</label>
+                    <input class="accUser" type="text" disabled placeholder="Username">
+                </div>
+                <div class="input-zone">
+                    <label>Email</label>
+                    <input class="accEmail" type="text" placeholder="Email">
+                </div>
+                <div class="input-zone">
+                    <label>New Password</label>
+                    <input class="accPass" type="password" placeholder="New Password">
+                </div>
+                <button class="saveSetting">Save Settings</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var db = localStorage.getItem("dataBase")
+        if(!db || db && JSON.parse(db).loggedInUser === ""){
+            window.location.href = "index.html"
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
