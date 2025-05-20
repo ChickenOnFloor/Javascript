@@ -362,10 +362,11 @@ justify-content: start;
 
 .items-list{
     height: 100%;
-    overflow: auto;
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    flex: 1;
 }
 
 .closeit{
@@ -385,4 +386,6 @@ justify-content: start;
 }
 .item-card img{
     height: 60px;
+    width: 60px;
+    object-fit: cover;
 }
