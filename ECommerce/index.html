@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - Shopping</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="main">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <div class="logo-title">
+                            BearMart
+                        </div>
+                    </div>
+                    <div class="search-container">
+                        <div class="search">
+                            <input type="text" placeholder="Search...">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                    <div class="nav-buttons">
+                        <p class="greeting">Hello, <br> <span class="greet">Log In</span></p>
+                        <div class="account">
+                            <i class="fa-solid fa-user"></i>
+                            <div class="dropdown drop1">
+                                <div class="drop-button accset">
+                                    Account
+                                </div>
+                                <div class="drop-button dashset">
+                                    Dashboard
+                                </div>
+                                <div class="drop-button logout">
+                                    Logout
+                                </div>
+                            </div>
+                            <div class="dropdown drop2">
+                                <div class="drop-button acclogin">
+                                    Log in
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="categories">
+                    <h1>CATEGORIES</h1>
+                    <div class="classList">
+                        
+                    </div>
+                </div>
+                <div class="products">
+                    <h1>PRODUCTS</h1>
+                    <div class="product-cards">
+    
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="items-sec">
+                        <div class="close-btn">
+                            <button class="closeit">X</button>
+                        </div>
+                        <div class="items-list">
+                        </div>
+                    </div>
+                    <div class="total-sec">
+                        <label>Total</label>
+                        <div class="total">0$</div>
+                    </div>
+
+                </div>
+            </div>        
+        </div>
+
+        <script>
+            const db = JSON.parse(localStorage.getItem("dataBase"));
+            const account = document.querySelector('.account');
+            const greet = document.querySelector(".greet");
+            const drop1 = document.querySelector(".drop1");
+            const drop2 = document.querySelector(".drop2");
+            const cart = document.querySelector(".cart")
+            const sidebar = document.querySelector(".sidebar")
+            const closeit = document.querySelector(".closeit")
+            if (!db || db.loggedInUsername === "") {
+                greet.innerHTML = "Log In";
+
+                account.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    drop2.style.display = "block";
+                });
+
+                document.addEventListener("click", (event) => {
+                    if (!drop2.contains(event.target) && !account.contains(event.target)) {
+                        drop2.style.display = "none";
+                    }
+                });
+                cart.addEventListener("click" , () => {
+                    alert("Login to see your cart")
+                })
+            } else {
+                greet.innerHTML = db.loggedInUsername;
+
+                account.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    drop1.style.display = "block";
+                });
+
+                document.addEventListener("click", (event) => {
+                    if (!drop1.contains(event.target) && !account.contains(event.target)) {
+                        drop1.style.display = "none";
+                    }
+                });
+                cart.addEventListener("click" , () => {
+                    sidebar.style.display = "flex"
+                })
+                closeit.addEventListener("click", () => {
+                    
+                    sidebar.style.display = "none"
+                })
+            }
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>

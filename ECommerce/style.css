@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-family: "DM Mono", monospace;
+    max-width: 2048px;
+}
+
+.logo-title{
+    font-family: "Caveat", sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.navbar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 6fr 3fr;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  background-color: whitesmoke;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.308);
+  gap: 10px;
+}
+
+.nav-buttons{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-buttons > div{
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav-buttons > p{
+    width: auto;
+    height: 40px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.nav-buttons span{
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.search{
+    border: 1px solid black;
+    width: 100%;
+    height: 40px;
+    max-width: 450px;
+    border-radius: 40px;
+    padding: 10px;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-buttons > div{
+    cursor: pointer;
+}
+.search input{
+    border: none;
+    width: 100%;
+    height: 30px;
+    outline: none;
+    background-color: whitesmoke;
+}
+
+
+.search-container{
+    width: 100%;
+}
+
+.dropdown{
+    position: absolute;
+    background-color: whitesmoke;
+    width:160px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(0%, 0%);
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    border-bottom: none;
+    display: none;
+}
+
+.drop-button{
+    width: 160;
+    height: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.308);
+    text-align: center;
+}
+
+.categories{
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+.products{
+    padding: 20px;
+    background-color: whitesmoke;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.classList{
+    margin-top: 10px;
+}
+.classes {
+    padding: 4px 8px;
+    border-radius: 14px;
+    border: none;
+    border: 1px solid rgba(0,0,0,0.368)
+}
+
+.product-cards{
+    margin-top: 10px;
+    height: 640px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.368);
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    flex-wrap: wrap;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+justify-content: start;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.p-card{
+    background-color: whitesmoke;
+    width: 200px;
+    height: 240px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.368);
+}
+
+.p-card img{
+    height: 60%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.pa{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: 40px;
+}
+
+.pa button{
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.368);
+    cursor: pointer;
+}
+.pa button:hover{
+    background-color: black;
+    border: 1px whitesmoke;
+    color: white
+}
+
+
+/*Account*/
+.a-main{
+    width: 100%;
+    height: 100%;
+}
+
+.a-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.setting{
+    width: 500px;
+    height: 300px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.425);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+}
+
+.input-zone{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-zone input{
+    width: 260px;
+    height: 28px;
+    text-align: center;
+}
+
+.setting button{
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.445);
+    cursor: pointer;
+}
+
+
+.d-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+}
+.d-card{
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.363);
+    border: 1px solid rgba(0, 0, 0, 0.288);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#file-upload{
+    display: none;
+}
+
+.upload-div{
+    width: 160px;
+    height: 160px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: start;
+    position: relative;
+}
+
+.upload-div img{
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+}
+
+.upload{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.288);
+    z-index: 1;
+}
+
+.item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.d-card button{
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #04AA6D;
+    color: white;
+}
+
+.item input{
+    border: none;
+    background-color: whitesmoke;
+    width: 200px;
+    height: 30px;
+    border-radius: 8px;
+    padding-left: 8px;
+    border: 1px solid rgba(0,0,0,0.368);
+}
+
+
+.classList{
+    display: flex;
+    gap: 10px;
+}
+
+.sidebar{
+    width: 300px;
+    max-height: 100vh;
+    background-color: white;
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    gap: 10px;
+    border: 1px solid rgba(0,0,0,0.308);
+    display: none;
+}
+
+.items-sec{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.total-sec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    border-top: 1px solid rgba(0,0,0,0.328);
+}
+
+.items-list{
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    width: 100%;
+    max-height: calc(100vh - 200px);
+
+}
+
+.closeit{
+    border: none;
+    font-size: 22px;
+    background-color: white;
+    font-weight: bold;
+    align-self: flex-start;
+    border: 1px solid rgba(0,0,0,0.328);
+    padding: 0px 6px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.closeit:hover{
+    background-color: black;
+    color: white;
+}
+.item-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+    height: 70px;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    border-radius: 4px;
+    padding: 8px 4px;
+}
+.item-card img{
+   height: 64px;
+    width: 70px;
+    object-fit: cover;
+    border: 1px solid rgba(0,0,0,0.328);
+    border-radius: 8px;
+}
+
+.item-card button{
+    width: 20px;
+    height: 20px;
+    border: none;
+    font-weight: bold;
+    border: 1px solid rgba(0,0,0,0.328);
+    border-radius: 4px;
+}
+
+.item-info{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 120px;
+}
+
+.close-btn{
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.328);
+    padding: 10px 0px;
+}
+
+.remove-itm:hover{
+    background-color: black;
+    color: white;
+}
+
+
+.di-list{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 1px solid rgba(0,0,0,0.328);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.dlist-col {
+    width: 100%;
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    
+    align-items: center;
+    background-color: whitesmoke;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px; 
+    place-items: center;
+}
+
+
+.owner-items{
+    margin-top: 4px;
+    width: 100%;
+    max-height: 400px;
+    overflow: auto;
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+}
+.dashCard-item {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    place-items: center;
+}
+.dashCard-item img{
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+}
+
+.ed-btn i{
+    cursor: pointer;
+}
+
+.edit-input{
+    border: none;
+    border: 1px solid rgba(0,0,0,0.328);
+    border-radius: 4px;
+}
+
+.dashCard-item input{
+    width: 100px;
+    padding: 4px;
+}
