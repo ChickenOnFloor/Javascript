@@ -324,8 +324,6 @@ if(dashImg){
             user.products.forEach((product, productIndex) => {
                 const itemDiv = document.createElement("div");
                 itemDiv.className = "dashCard-item";
-
-                // Create editable fields
                 itemDiv.innerHTML = `
                     <img src="${product.image}" alt="">
                     <p class="name">${product.name}</p>
@@ -338,16 +336,12 @@ if(dashImg){
                 `;
 
                 OwnerItem.appendChild(itemDiv);
-
-                // Delete Function
                 const delbtn = itemDiv.querySelector(".delete-btn");
                 delbtn.addEventListener("click", () => {
                     dataBase.Users[userIndex].products.splice(productIndex, 1);
                     updataDatabase();
                     renderDash();
                 });
-
-                // Edit Function
                 const editBtn = itemDiv.querySelector(".edit-btn");
                 editBtn.addEventListener("click", () => {
                     const nameP = itemDiv.querySelector(".name");
